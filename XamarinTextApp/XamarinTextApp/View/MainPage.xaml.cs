@@ -9,8 +9,7 @@ using XamarinTextApp.ViewModels;
 namespace XamarinTextApp
 {
 	public partial class MainPage : ContentPage
-	{
-        MainpageViewModel viewModel;
+	{        
 		public MainPage()
 		{
 			InitializeComponent(); 

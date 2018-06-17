@@ -1,44 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 using Xamarin.Forms;
+using XamarinTextApp.Model;
 
 namespace XamarinTextApp.ViewModels
 {
-    // Inheritated INotifyPropertyChanged for 
-    class MainpageViewModel : INotifyPropertyChanged
+    class MainpageViewModel
     {
-        private string labelText = "hello World!!";
-        public string LabelText {
-            get{
-                return labelText;
-            }
-            set {
-                labelText = value;
-                RaisePpropertyChanged();
-            }
-        }
+        public ObservableCollection<Person> Person { get; set; } = new ObservableCollection<Person>();
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        //helper method
-        protected void RaisePpropertyChanged([CallerMemberName] string caller = "")
+        public MainpageViewModel()
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(caller));
-        }
-
-        private Command changeTextCommand;
-        public Command ChangeTextCommand
-        {
-            get
+            for (int i = 0; i < 5; i++)
             {
-                return changeTextCommand ?? (changeTextCommand = new Command(
-                    () =>
-                    {
-                        LabelText = "GoodBye";
-                    }));
+                Person person = new Person();
+                person.Name = "Rahul" + i.ToString();
+                person.Address = i.ToString() + "Bhubaneshwar";
             }
         }
     }
