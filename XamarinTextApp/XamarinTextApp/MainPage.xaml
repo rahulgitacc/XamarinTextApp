@@ -9,11 +9,16 @@
         <Slider x:Name="mySlider" 
                 Minimum="0" 
                 Maximum="100" 
-                VerticalOptions="CenterAndExpand" />
+                VerticalOptions="Center" />
         <Label FontSize="20" 
                FontAttributes="Bold" 
                BindingContext="{x:Reference mySlider}"
                Text="{Binding Value}"/>
+        <Label Text="{Binding LabelText}" BackgroundColor="Blue" TextColor="White" />
+        <Button Text="Click Me!!" 
+                BackgroundColor="Bisque" 
+                TextColor="Yellow" 
+                Command="{Binding ChangeTextCommand}" />
     </StackLayout>
 
 </ContentPage>
