@@ -19,6 +19,10 @@
                 BackgroundColor="Bisque" 
                 TextColor="Yellow" 
                 Command="{Binding ChangeTextCommand}" />
+        <Image Source="xamagon.png"
+               Aspect="AspectFit"
+               HeightRequest="75"
+               WidthRequest="75" />
     </StackLayout>
 
 </ContentPage>
