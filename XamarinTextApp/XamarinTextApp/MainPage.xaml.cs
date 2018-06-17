@@ -13,10 +13,9 @@ namespace XamarinTextApp
         MainpageViewModel viewModel;
 		public MainPage()
 		{
-			InitializeComponent();
-            viewModel = new MainpageViewModel();
+			InitializeComponent(); 
             // helps to bind the page with viewModel
-            BindingContext = viewModel; 
+            BindingContext = new MainpageViewModel(); ; 
 		}
 	}
 }
