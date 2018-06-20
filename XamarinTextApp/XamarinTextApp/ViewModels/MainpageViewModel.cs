@@ -15,11 +15,13 @@ namespace XamarinTextApp.ViewModels
 
         public MainpageViewModel()
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 1; i < 6; i++)
             {
                 Person person = new Person();
                 person.Name = "Rahul" + i.ToString();
                 person.Address = i.ToString() + "Bhubaneshwar";
+                person.ImageSource = "image" + i + ".png";
+                Person.Add(person);
             }
         }
     }
