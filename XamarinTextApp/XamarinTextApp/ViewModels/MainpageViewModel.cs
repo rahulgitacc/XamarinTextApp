@@ -18,7 +18,8 @@ namespace XamarinTextApp.ViewModels
             for (int i = 1; i < 6; i++)
             {
                 Person person = new Person();
-                person.Name = "Rahul" + i.ToString();
+                person.FirstName = "Rahul" + i.ToString();
+                person.LastName = "Sen" + i.ToString();
                 person.Address = i.ToString() + "Bhubaneshwar";
                 person.ImageSource = "image" + i + ".png";
                 Person.Add(person);
