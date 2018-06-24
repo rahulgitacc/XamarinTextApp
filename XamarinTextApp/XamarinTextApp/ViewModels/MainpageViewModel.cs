@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using Xamarin.Forms;
 using XamarinTextApp.Model;
+using static System.Math;
 
 namespace XamarinTextApp.ViewModels
 {
@@ -15,13 +16,14 @@ namespace XamarinTextApp.ViewModels
 
         public MainpageViewModel()
         {
-            for (int i = 1; i < 6; i++)
+            for (int i = 1; i < 21; i++)
             {
                 Person person = new Person();
                 person.FirstName = "Rahul" + i.ToString();
                 person.LastName = "Sen" + i.ToString();
-                person.Address = i.ToString() + "Bhubaneshwar";
-                person.ImageSource = "image" + i + ".png";
+                //person.Address = i.ToString() + "Bhubaneshwar";
+                //person.ImageSource = "image" + i + ".png";
+                person.Age = (decimal)(35 + new Random().NextDouble());
                 Person.Add(person);
             }
         }
