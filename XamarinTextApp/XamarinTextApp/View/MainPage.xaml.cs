@@ -15,7 +15,7 @@ namespace XamarinTextApp
 		{
 			InitializeComponent(); 
             // helps to bind the page with viewModel
-            BindingContext = new MainpageViewModel();
+            //BindingContext = new MainpageViewModel();
 		}        
 
         private void SelectListView(object sender, SelectedItemChangedEventArgs e)
